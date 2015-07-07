@@ -4,6 +4,7 @@ This cookbook will install django-celery.
 
 Requirements
 ------------
+yum-gd
 python
 
 Attributes

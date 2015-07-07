@@ -13,6 +13,6 @@ describe 'celery::default' do
 
   it 'installs django-celery' do
     expect(chef_run).to install_easy_install_package('django-celery')
-    except(chef_run).to_not install_easy_install_package('celery')
+    expect(chef_run).to_not install_easy_install_package('celery')
   end
 end

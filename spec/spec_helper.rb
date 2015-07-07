@@ -9,7 +9,7 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.log_level = :error
   config.platform = 'centos'
-  config.version = '6.5'
+  config.version = '6.6'
   config.color = true
   config.tty = true
   config.formatter = :documentation
