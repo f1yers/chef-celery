@@ -1,7 +1,5 @@
-require 'coveralls'
 require 'chefspec'
 require 'chefspec/berkshelf'
-require 'support/matchers'
 require 'webmock/rspec'
 
 WebMock.allow_net_connect!
@@ -15,12 +13,11 @@ RSpec.configure do |config|
   config.color = true
   config.tty = true
   config.formatter = :documentation
-  config.filter_run = { focus: true }
+  config.filter_run focus: true
   config.run_all_when_everything_filtered = true
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
 end
 
-Coveralls.wear!
 at_exit { ChefSpec::Coverage.report! }

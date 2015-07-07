@@ -1,9 +1,10 @@
 # encoding: utf-8
 require 'chefspec'
+require 'chefspec/berkshelf'
 require 'spec_helper'
 require 'fauxhai'
 
-describe 'celery' do
+describe 'celery::default' do
   let(:chef_run) { ChefSpec::SoloRunner.converge(described_recipe) }
 
   it 'includes the python recipe' do
