@@ -6,3 +6,9 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+include_recipe 'python'
+
+easy_install_package 'django-celery' do
+  action :install
+end
